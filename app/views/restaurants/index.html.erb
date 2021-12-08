@@ -1,0 +1,15 @@
+
+<h1>All restaurants</h1>
+
+<ol class="border-bottom pb-2">
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant)  %>
+    </li>
+  <% end %>
+</ol>
+
+<div class="d-flex flex-row">
+  <div><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></div>
+  <div><%= link_to "Add a restaurant", new_restaurant_path %></div>
+</div>
